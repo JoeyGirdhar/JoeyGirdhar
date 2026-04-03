@@ -51,7 +51,7 @@ Focus: Business, Computer Science, AI/ML
 
 <div align="center">
 
-### PACMAN
+[![Trophies](https://github-profile-trophy.vercel.app/?username=JoeyGirdhar&theme=radical&no-frame=true&row=1&column=7)](https://github.com/JoeyGirdhar)
 
 <div align="center">
 
