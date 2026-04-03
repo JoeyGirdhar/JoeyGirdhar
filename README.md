@@ -43,15 +43,9 @@ Focus: Business, Computer Science, AI/ML
 
 <div align="center">
 
-![Snake animation](https://raw.githubusercontent.com/JoeyGirdhar/JoeyGirdhar/output/github-snake-dark.svg)
-</div>
+![Snake animation](https://raw.githubusercontent.com/JoeyGirdhar/JoeyGirdhar/output/github-contribution-grid-snake-dark.svg)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=6A0DAD&width=435&lines=Founder+%26+CEO;AI+Builder;Investor;Always+Learning)](https://git.io/typing-svg)
-
-
-[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=JoeyGirdhar&theme=radical&hide_border=true)](https://wakatime.com/@JoeyGirdhar)
-
-[![Skyline](https://skyline.github.com/JoeyGirdhar/2025)](https://skyline.github.com/JoeyGirdhar/2025)
 
 ![Pacman](https://raw.githubusercontent.com/JoeyGirdhar/output/pacman-contribution-graph.svg)
 
