@@ -48,7 +48,6 @@ Focus: Business, Computer Science, AI/ML
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=6A0DAD&width=435&lines=Founder+%26+CEO;AI+Builder;Investor;Always+Learning)](https://git.io/typing-svg)
 
-![Jokes Card](https://readme-jokes.vercel.app/api?theme=radical)
 
 [![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=JoeyGirdhar&theme=radical&hide_border=true)](https://wakatime.com/@JoeyGirdhar)
 
@@ -58,7 +57,6 @@ Focus: Business, Computer Science, AI/ML
 
 [![Skills](https://skillicons.dev/icons?i=python,react,nodejs,figma,git,firebase,aws&perline=7)](https://skillicons.dev)
 
-![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Rhythmay%20Girdhar&fontSize=50&fontAlignY=35&animation=fadeIn&desc=Founder%20|%20Investor%20|%20Builder&descAlignY=55)
 ## Inspirational Quote
 
 <div align="center">
