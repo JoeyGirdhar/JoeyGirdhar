@@ -18,14 +18,14 @@ I'm a 16-year-old entrepreneur, investor, and builder from Austin, Texas, and I'
 
 ### Key Achievements
 
-- **FBLA NLC Qualifier** — Top 2% nationally, 2nd place at Texas State (Business Ethics)
-- **YIS Top 100 Global Stock Pitch** — Pitched Marvell Technologies (MRVL) at $78, now $108
-- **YIS Financial Quiz Bowl** — 2nd place internationally, $500 scholarship (Top 0.1%)
-- **DECA Texas State Competitor** — District 5 Champion - State Competitor
-- **NSDA Varsity Extemporaneous Speaker** — Extemp/Speech Captain, Multiple finals placements, State Recognition
-- **UIL Informative Speaking** — 4th place at Districts, Qualified for regionals
-- **Criyx AI** — 5-figure revenue, 20+ clients across UAE, US, India, and Europe
-- **UniAdz** — 100+ waitlist, $0 paid marketing, 5-7 inbound VC conversations
+- **FBLA NLC Qualifier** - Top 2% nationally, 2nd place at Texas State (Business Ethics)
+- **YIS Top 100 Global Stock Pitch** - Pitched Marvell Technologies (MRVL) at $78, now $108
+- **YIS Financial Quiz Bowl** - 2nd place internationally, $500 scholarship (Top 0.1%)
+- **DECA Texas State Competitor** - District 5 Champion - State Competitor
+- **NSDA Varsity Extemporaneous Speaker** - Extemp/Speech Captain, Multiple finals placements, State Recognition
+- **UIL Informative Speaking** - 4th place at Districts, Qualified for regionals
+- **Criyx AI** - 5-figure revenue, 20+ clients across UAE, US, India, and Europe
+- **UniAdz** - 100+ waitlist, $0 paid marketing, 5-7 inbound VC conversations
 - **App Developer** - Creator of "Hourly" (Best Innovation Award winner)
 
 ## Education
@@ -44,12 +44,21 @@ Focus: Business, Computer Science, AI/ML
 <div align="center">
 
 ![Snake animation](https://raw.githubusercontent.com/JoeyGirdhar/JoeyGirdhar/output/github-snake-dark.svg)
-
 </div>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=6A0DAD&width=435&lines=Founder+%26+CEO;AI+Builder;Investor;Always+Learning)](https://git.io/typing-svg)
 
+![Jokes Card](https://readme-jokes.vercel.app/api?theme=radical)
 
+[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=JoeyGirdhar&theme=radical&hide_border=true)](https://wakatime.com/@JoeyGirdhar)
+
+[![Skyline](https://skyline.github.com/JoeyGirdhar/2025)](https://skyline.github.com/JoeyGirdhar/2025)
+
+![Pacman](https://raw.githubusercontent.com/JoeyGirdhar/output/pacman-contribution-graph.svg)
+
+[![Skills](https://skillicons.dev/icons?i=python,react,nodejs,figma,git,firebase,aws&perline=7)](https://skillicons.dev)
+
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Rhythmay%20Girdhar&fontSize=50&fontAlignY=35&animation=fadeIn&desc=Founder%20|%20Investor%20|%20Builder&descAlignY=55)
 ## Inspirational Quote
 
 <div align="center">
