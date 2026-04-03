@@ -45,7 +45,7 @@ Focus: Business, Computer Science, AI/ML
 
 ![Snake animation](https://raw.githubusercontent.com/JoeyGirdhar/JoeyGirdhar/output/github-contribution-grid-snake-dark.svg)
 
-<div align="center">
+<div align="left">
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=6A0DAD&width=435&lines=Founder+%26+CEO;AI+Builder;Investor;Always+Learning)](https://git.io/typing-svg)
 
