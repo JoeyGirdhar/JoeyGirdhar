@@ -49,9 +49,6 @@ Focus: Business, Computer Science, AI/ML
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=6A0DAD&width=435&lines=Founder+%26+CEO;AI+Builder;Investor;Always+Learning)](https://git.io/typing-svg)
 
-<div align="center">
-
-[![Trophies](https://github-profile-trophy.vercel.app/?username=JoeyGirdhar&theme=radical&no-frame=true&row=1&column=7)](https://github.com/JoeyGirdhar)
 
 <div align="center">
 
@@ -69,7 +66,7 @@ Focus: Business, Computer Science, AI/ML
 
 <div align="center">
   
-### "The human mind was not built for the ordinary. It was built to reach the edges of what's possible, and most people never even get close. I plan to."
+### "The human mind was not built for the ordinary. It was built to reach the edges of what's possible, and most people never even get close. *I plan to.*"
 
 
 From [JoeyGirdhar](https://github.com/JoeyGirdhar)
