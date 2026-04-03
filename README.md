@@ -51,7 +51,7 @@ Focus: Business, Computer Science, AI/ML
 
 <div align="center">
 
-![Pacman](https://raw.githubusercontent.com/JoeyGirdhar/output/pacman-contribution-graph.svg)
+![Pac-Man animation](https://raw.githubusercontent.com/JoeyGirdhar/JoeyGirdhar/output-pacman/github-contribution-grid-snake-dark.svg)
 
 <div align="center">
 
