@@ -47,7 +47,7 @@ Focus: Business, Computer Science, AI/ML
 
 <div align="left">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=6A0DAD&width=600&lines=Going+beyond+what%27s+possible;Revolutionizing+the+world%2C+one+line+of+code+at+a+time;Supercalifragilisticexpialidocious;Xertz-ing+my+way+through+problems;Thinking+in+frameworks%2C+not+straight+lines;The+edges+of+what%27s+possible+is+where+I+live;Listening+to+Music+%F0%9F%8E%B5;Coding+at+2am+%F0%9F%92%BB;Studying+%F0%9F%93%9A;Sleeping+%F0%9F%98%B4;Connect+with+me!+%F0%9F%91%87;Building+the+future%2C+one+commit+at+a+time;Serendipity+is+just+preparation+meeting+chaos;Kerfuffle-free+since+never;Ultraviolet+thinking+in+an+infrared+world;Founder+%26+CEO;Invincible;King+of+the+Pirates;Wolf+of+Wall+Street)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=6A0DAD&width=600&lines=Going+beyond+what%27s+possible;Revolutionizing+Reality;Supercalifragilisticexpialidocious;Xertz-ing+my+way+through+problems;Thinking+in+frameworks%2C+not+straight+lines;The+edges+of+what%27s+possible+is+where+I+live;Listening+to+Music+%F0%9F%8E%B5;Coding+at+2am+%F0%9F%92%BB;Studying+%F0%9F%93%9A;Sleeping+%F0%9F%98%B4;Connect+with+me!+%F0%9F%91%87;Building+the+future%2C+one+commit+at+a+time;Serendipity+is+just+preparation+meeting+chaos;Kerfuffle-free+since+never;Ultraviolet+thinking+in+an+infrared+world;Founder+%26+CEO;Invincible;King+of+the+Pirates;Wolf+of+Wall+Street)](https://git.io/typing-svg)
 
 <div align="center">
 
