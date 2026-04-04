@@ -1,6 +1,6 @@
 <div align="center">
   
-# Hi, I'm Joey Girdhar
+# Hey, I'm Joey Girdhar
 
 ### Student at Rouse High School | Entrepreneur | Computer Science & AI/ML | Finance
 
