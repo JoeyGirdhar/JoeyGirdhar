@@ -2,7 +2,7 @@
   
 # Hey, I'm Joey Girdhar
 
-### Student at Rouse High School | Entrepreneur | Computer Science & AI/ML | Finance
+### Student at Rouse High School | Entrepreneur | Computer Science & AI/ML
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rhythmay-girdhar/)
 [![Profile Views](https://komarev.com/ghpvc/?username=JoeyGirdhar&color=blueviolet&style=for-the-badge)](https://github.com/JoeyGirdhar)
