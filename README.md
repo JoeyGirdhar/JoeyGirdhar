@@ -26,7 +26,7 @@ I'm a 16-year-old entrepreneur, investor, and builder from Austin, Texas, and I'
 - **UIL Informative Speaking** - 4th place at Districts, Qualified for regionals
 - **Criyx AI** - 5-figure revenue, 20+ clients across UAE, US, India, and Europe
 - **UniAdz** - 100+ waitlist, $0 paid marketing, 5-7 inbound VC conversations
-- **App Developer** - Creator of "Hourly" (Best Innovation Award winner)
+- **App Developer** - Creator of "Hourly" (Best Innovation Award winner $250 PRIZE)
 
 ## Education
 
