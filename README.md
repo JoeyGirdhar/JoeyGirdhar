@@ -21,7 +21,7 @@ I'm a 16-year-old entrepreneur, investor, and builder from Austin, Texas, and I'
 - **FBLA NLC Qualifier** - Top 2% nationally, 2nd place at Texas State (Business Ethics)
 - **YIS Top 100 Global Stock Pitch** - Pitched Marvell Technologies (MRVL) at $78 - $108 (40% Upside - 1 Month)
 - **YIS Financial Quiz Bowl** - 2nd place internationally, $500 scholarship (Top 0.1%)
-- **DECA Texas State Competitor** - District 5 Champion - State Competitor
+- **DECA Texas State Competitor** - District 5 Champion - State Competitor - District 5 Media Team
 - **NSDA Varsity Extemporaneous Speaker** - Extemp/Speech Captain, Multiple finals placements, State Recognition
 - **UIL Informative Speaking** - 4th place at Districts, Qualified for regionals
 - **Criyx AI** - 5-figure revenue, 20+ clients across UAE, US, India, and Europe
