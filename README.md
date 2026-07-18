@@ -1,16 +1,13 @@
 <div align="center">
 
-<!-- Profile View Counter Metric Badge -->
-[![Profile Views](https://komarev.com)](https://github.com)
+<h3><code>joey@github ~ $ ./contributions.sh</code></h3>
 
-<br>
-
-### <code>joey@github ~ $ ./contributions.sh</code>
 <img src="./contrib-heatmap.svg" width="860" />
 
 <br><br>
 
-### <code>joey@github ~ $ whoami</code>
+<h3><code>joey@github ~ $ whoami</code></h3>
+
 <table>
   <tr>
     <td valign="top"><img src="./avi-ascii.svg" width="370" /></td>

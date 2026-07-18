@@ -1,55 +1,121 @@
 import json
 import os
-import subprocess
-from datetime import datetime, timedelta
+import re
+import sys
 
-def fetch_map_local():
-    print("Extracting actual contribution data from local git repository logs...")
-    
-    # 1. Pull down history from your repository log database
-    try:
-        log_data = subprocess.check_output(
-            ["git", "log", "--all", "--pretty=format:%ad", "--date=short"],
-            stderr=subprocess.DEVNULL
-        ).decode("utf-8")
-    except Exception:
-        print("Fallback tracking initialized: building default activity placeholder layout.")
-        log_data = ""
+import requests
+from bs4 import BeautifulSoup
 
-    # Count up your commit frequencies per day matching profile properties
-    commit_counts = {}
-    for line in log_data.splitlines():
-        date_str = line.strip()
-        if date_str:
-            commit_counts[date_str] = commit_counts.get(date_str, 0) + 1
+USERNAME = "JoeyGirdhar"
+OUT = os.path.join("data", "contributions.json")
 
-    # 2. Build a standard 53-week timeline tracking scale matrix array grid layout
-    end_date = datetime.now()
-    start_date = end_date - timedelta(weeks=53)
-    
-    history_data = []
-    current_date = start_date
-    while current_date <= end_date:
-        date_str = current_date.strftime("%Y-%m-%d")
-        commits = commit_counts.get(date_str, 0)
-        
-        # Translate commit frequency totals into visual level scales 0-4
-        if commits == 0:   level = 0
-        elif commits < 3:  level = 1
-        elif commits < 6:  level = 2
-        elif commits < 10: level = 3
-        else:              level = 4
-            
-        history_data.append({
-            "date": date_str,
-            "level": level
-        })
-        current_date += timedelta(days=1)
-            
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml",
+    "X-Requested-With": "XMLHttpRequest",
+}
+
+
+def fetch_html(username):
+    url = "https://github.com/users/" + username + "/contributions"
+    print("Fetching " + url)
+    r = requests.get(url, headers=HEADERS, timeout=30)
+    r.raise_for_status()
+    return r.text
+
+
+def parse(html):
+    soup = BeautifulSoup(html, "html.parser")
+
+    tips = {}
+    for tip in soup.find_all("tool-tip"):
+        target = tip.get("for")
+        if not target:
+            continue
+        m = re.search(r"(\d[\d,]*)\s+contribution", tip.get_text())
+        tips[target] = int(m.group(1).replace(",", "")) if m else 0
+
+    cells = soup.select("td.ContributionCalendar-day")
+    if not cells:
+        cells = soup.select("rect.ContributionCalendar-day")
+
+    days = []
+    for cell in cells:
+        d = cell.get("data-date")
+        if not d:
+            continue
+        level = int(cell.get("data-level") or 0)
+        count = tips.get(cell.get("id"), 0)
+        if count == 0 and level > 0:
+            count = level
+        days.append({"date": d, "count": count, "level": level})
+
+    days.sort(key=lambda x: x["date"])
+    return days
+
+
+def stats(days):
+    total = sum(d["count"] for d in days)
+
+    longest = 0
+    current = 0
+    for d in days:
+        if d["count"] > 0:
+            current += 1
+            if current > longest:
+                longest = current
+        else:
+            current = 0
+
+    streak = 0
+    for d in reversed(days):
+        if d["count"] > 0:
+            streak += 1
+        else:
+            break
+
+    best = {"date": "", "count": 0}
+    for d in days:
+        if d["count"] > best["count"]:
+            best = d
+
+    monthly = {}
+    for d in days:
+        key = d["date"][:7]
+        monthly[key] = monthly.get(key, 0) + d["count"]
+
+    return {
+        "total": total,
+        "current_streak": streak,
+        "longest_streak": longest,
+        "best_day": best,
+        "monthly": monthly,
+    }
+
+
+def main():
+    html = fetch_html(USERNAME)
+    days = parse(html)
+
+    if len(days) < 300:
+        print("")
+        print("ERROR: only captured " + str(len(days)) + " day cells - expected around 365.")
+        print("Check that the username is spelled right and the profile is public.")
+        print("Not overwriting data/contributions.json with bad data.")
+        return 1
+
+    payload = {"username": USERNAME, "days": days, "stats": stats(days)}
+
     os.makedirs("data", exist_ok=True)
-    with open("data/contributions.json", "w", encoding="utf-8") as f:
-        json.dump(history_data, f, indent=2)
-    print(f"Success! Extracted {len(history_data)} calendar grid blocks into data/contributions.json")
+    f = open(OUT, "w", encoding="utf-8", newline="\n")
+    json.dump(payload, f, indent=2)
+    f.write("\n")
+    f.close()
+
+    print("Captured " + str(len(days)) + " days, " + format(payload["stats"]["total"], ",") + " contributions.")
+    print("Range: " + days[0]["date"] + " to " + days[-1]["date"])
+    return 0
+
 
 if __name__ == "__main__":
-    fetch_map_local()
+    sys.exit(main())
