@@ -9,34 +9,28 @@ def generate_card():
     .blue { fill: #58a6ff; }
     @keyframes fadeIn { to { opacity: 1; } }
   </style>
-
   <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
   <circle cx="40" cy="20" r="6" fill="#ffbd2e"/>
   <circle cx="60" cy="20" r="6" fill="#27c93f"/>
   <text x="245" y="24" fill="#8b949e" font-family="monospace" font-size="12" text-anchor="middle">joey@github: ~</text>
-
   <text x="20" y="65" class="text title" style="animation-delay: 0.1s;">joey@github ~ $ neofetch</text>
   <text x="20" y="90" class="text blue" style="animation-delay: 0.2s;">joey@github</text>
   <text x="20" y="100" class="text val" style="animation-delay: 0.25s;">-----------</text>
-
   <text x="20" y="125" class="text" style="animation-delay: 0.3s;"><tspan class="key">Now</tspan>       <tspan class="val">Founder &amp; CEO @ Criyx AI &amp; UniAdz</tspan></text>
   <text x="20" y="145" class="text" style="animation-delay: 0.4s;"><tspan class="key">Prev</tspan>      <tspan class="val">Stock Pitcher @ YIS Global Top 100</tspan></text>
   <text x="20" y="165" class="text" style="animation-delay: 0.5s;"><tspan class="key">Also</tspan>      <tspan class="val">FBLA National Qualifier | DECA Champ</tspan></text>
   <text x="20" y="185" class="text" style="animation-delay: 0.6s;"><tspan class="key">Edu</tspan>       <tspan class="val">Rouse High School '28 (CS / AI / ML)</tspan></text>
-
   <text x="20" y="215" class="text blue" style="animation-delay: 0.7s;">- Stack</text>
   <text x="20" y="235" class="text" style="animation-delay: 0.8s;"><tspan class="key">Frontend</tspan>   <tspan class="val">React, JavaScript, TypeScript, Figma</tspan></text>
   <text x="20" y="255" class="text" style="animation-delay: 0.9s;"><tspan class="key">Backend</tspan>    <tspan class="val">Node.js, Python, Swift, Firebase, SQL</tspan></text>
   <text x="20" y="275" class="text" style="animation-delay: 1.0s;"><tspan class="key">Cloud</tspan>      <tspan class="val">AWS, Google Cloud, Supabase, Vercel</tspan></text>
-
   <text x="20" y="305" class="text blue" style="animation-delay: 1.1s;">- Highlights</text>
   <text x="20" y="325" class="text" style="animation-delay: 1.2s;"><tspan class="val">■ Hourly App Creator (Innovation Award Winner)</tspan></text>
   <text x="20" y="345" class="text" style="animation-delay: 1.3s;"><tspan class="val">■ 2nd Place Internationally - YIS Quiz Bowl</tspan></text>
 </svg>"""
-
     with open("info-card.svg", "w", encoding="utf-8") as f:
         f.write(svg_content)
-    print("Success! Created info-card.svg panel asset.")
+    print("Successfully built crisp vector template: info-card.svg")
 
 if __name__ == "__main__":
     generate_card()
