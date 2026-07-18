@@ -210,7 +210,7 @@
   <rect x="440" y="60" width="11" height="11" rx="2" fill="#161b22" />
   <rect x="440" y="75" width="11" height="11" rx="2" fill="#161b22" />
   <rect x="440" y="90" width="11" height="11" rx="2" fill="#161b22" />
-  <rect x="440" y="105" width="11" height="11" rx="2" fill="#0e4429" />
+  <rect x="440" y="105" width="11" height="11" rx="2" fill="#161b22" />
   <rect x="440" y="120" width="11" height="11" rx="2" fill="#161b22" />
   <rect x="440" y="135" width="11" height="11" rx="2" fill="#161b22" />
   <rect x="455" y="45" width="11" height="11" rx="2" fill="#161b22" />
@@ -381,7 +381,7 @@
   <rect x="800" y="105" width="11" height="11" rx="2" fill="#161b22" />
   <rect x="800" y="120" width="11" height="11" rx="2" fill="#161b22" />
   <rect x="800" y="135" width="11" height="11" rx="2" fill="#161b22" />
-  <rect x="815" y="45" width="11" height="11" rx="2" fill="#161b22" />
+  <rect x="815" y="45" width="11" height="11" rx="2" fill="#0e4429" />
 
   <text x="730" y="152" class="legend-text">Less</text>
   <rect x="765" y="143" width="11" height="11" rx="2" fill="#161b22"/>
