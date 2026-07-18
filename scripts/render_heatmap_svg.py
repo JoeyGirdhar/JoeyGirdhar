@@ -8,17 +8,22 @@ OUT = "contrib-heatmap.svg"
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
+TEXT = "#e6edf3"
 CELL = 12
 GAP = 3
 PITCH = CELL + GAP
-GUTTER = 30
-TOP = 22
-PAD = 14
+GUTTER = 34
+TOP = 24
+PAD = 16
 WEEKS = 53
-FOOTER = 44
+FOOTER = 48
 
 WIDTH = PAD * 2 + GUTTER + WEEKS * PITCH
 HEIGHT = PAD * 2 + TOP + 7 * PITCH + FOOTER
+
+POP = 0.55
+WEEK_STEP = 0.065
+DAY_STEP = 0.036
 
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -26,10 +31,8 @@ MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
 def esc(s):
     s = str(s)
-    s = s.replace("&", "&amp;")
-    s = s.replace("<", "&lt;")
-    s = s.replace(">", "&gt;")
-    s = s.replace('"', "&quot;")
+    for a, b in (("&", "&amp;"), ("<", "&lt;"), (">", "&gt;"), ('"', "&quot;")):
+        s = s.replace(a, b)
     return s
 
 
@@ -37,15 +40,12 @@ def build_grid(days):
     by_date = {}
     for d in days:
         by_date[d["date"]] = d
-
     if not by_date:
         raise SystemExit("No days found in contributions.json")
-
     last_dt = dt.date.fromisoformat(max(by_date))
     end_of_week = last_dt + dt.timedelta(days=(6 - last_dt.weekday()) % 7)
     start = end_of_week - dt.timedelta(days=WEEKS * 7 - 1)
     start = start - dt.timedelta(days=(start.weekday() + 1) % 7)
-
     grid = []
     for w in range(WEEKS):
         col = []
@@ -61,31 +61,32 @@ def render(payload):
     total = payload.get("stats", {}).get("total")
     if total is None:
         total = sum(d.get("count", 0) for d in days)
-
     grid = build_grid(days)
-    parts = []
+    last_delay = (WEEKS - 1) * WEEK_STEP + 6 * DAY_STEP + POP
 
-    parts.append(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="' + str(WIDTH) +
-        '" height="' + str(HEIGHT) + '" viewBox="0 0 ' + str(WIDTH) + ' ' + str(HEIGHT) +
-        '" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" '
-        'role="img" aria-label="GitHub contribution graph">'
-    )
+    p = []
+    p.append('<svg xmlns="http://www.w3.org/2000/svg" width="' + str(WIDTH) + '" height="' +
+             str(HEIGHT) + '" viewBox="0 0 ' + str(WIDTH) + ' ' + str(HEIGHT) +
+             '" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" '
+             'role="img" aria-label="GitHub contribution graph">')
 
-    parts.append("<style>")
-    parts.append(
+    p.append("<style>")
+    p.append(
+        ".lbl { fill: " + TEXT + "; font-size: 11px; font-weight: 600; } "
+        ".foot { fill: " + TEXT + "; font-size: 14px; font-weight: 700; opacity: 0; "
+        "animation: fade 0.9s ease-out " + format(last_delay, ".2f") + "s both; } "
         ".box { opacity: 0; transform-box: fill-box; transform-origin: center; "
-        "animation: pop .38s ease-out forwards; } "
-        "@keyframes pop { from { opacity: 0; transform: translateY(-6px) scale(.55); } "
-        "to { opacity: 1; transform: translateY(0) scale(1); } } "
-        ".lbl { fill: #7d8590; font-size: 10px; } "
-        ".foot { fill: #39d353; font-size: 12px; opacity: 0; "
-        "animation: fade .6s ease-out 2.6s forwards; } "
-        "@keyframes fade { to { opacity: .9; } }"
+        "animation: pop " + str(POP) + "s ease-out both; } "
+        "@keyframes pop { 0% { opacity: 0; transform: scale(.2); } "
+        "60% { opacity: 1; transform: scale(1.12); } "
+        "100% { opacity: 1; transform: scale(1); } } "
+        "@keyframes fade { to { opacity: 1; } } "
+        "@media (prefers-reduced-motion: reduce) { "
+        ".box, .foot { opacity: 1 !important; animation: none !important; } }"
     )
-    parts.append("</style>")
+    p.append("</style>")
 
-    parts.append('<rect width="' + str(WIDTH) + '" height="' + str(HEIGHT) + '" rx="8" fill="#0d1117"/>')
+    p.append('<rect width="' + str(WIDTH) + '" height="' + str(HEIGHT) + '" rx="10" fill="#0d1117"/>')
 
     seen = []
     for w in range(len(grid)):
@@ -93,68 +94,60 @@ def render(payload):
         if first.month not in seen and first.day <= 7:
             seen.append(first.month)
             x = PAD + GUTTER + w * PITCH
-            parts.append('<text class="lbl" x="' + str(x) + '" y="' + str(PAD + 12) + '">' + MONTHS[first.month - 1] + '</text>')
+            p.append('<text class="lbl" x="' + str(x) + '" y="' + str(PAD + 12) + '">' +
+                     MONTHS[first.month - 1] + '</text>')
 
     for wd, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
         y = PAD + TOP + wd * PITCH + CELL - 2
-        parts.append('<text class="lbl" x="' + str(PAD) + '" y="' + str(y) + '">' + name + '</text>')
+        p.append('<text class="lbl" x="' + str(PAD) + '" y="' + str(y) + '">' + name + '</text>')
 
     for w in range(len(grid)):
         for wd in range(7):
             day, rec = grid[w][wd]
             level = rec["level"] if rec else 0
             count = rec.get("count", 0) if rec else 0
-            if level < 0:
-                level = 0
-            if level > len(PALETTE) - 1:
-                level = len(PALETTE) - 1
+            level = max(0, min(level, len(PALETTE) - 1))
             x = PAD + GUTTER + w * PITCH
             y = PAD + TOP + wd * PITCH
-            delay = (w + wd) * 0.014
-            parts.append(
-                '<rect class="box" x="' + str(x) + '" y="' + str(y) + '" width="' + str(CELL) +
-                '" height="' + str(CELL) + '" rx="2.5" fill="' + PALETTE[level] +
-                '" style="animation-delay:' + format(delay, ".3f") + 's">' +
-                '<title>' + esc(count) + ' on ' + esc(day.isoformat()) + '</title></rect>'
-            )
+            delay = w * WEEK_STEP + wd * DAY_STEP
+            p.append('<rect class="box" x="' + str(x) + '" y="' + str(y) + '" width="' + str(CELL) +
+                     '" height="' + str(CELL) + '" rx="2.5" fill="' + PALETTE[level] +
+                     '" style="animation-delay:' + format(delay, ".3f") + 's">'
+                     '<title>' + esc(count) + ' on ' + esc(day.isoformat()) + '</title></rect>')
 
-    ly = PAD + TOP + 7 * PITCH + 18
-    lx = WIDTH - PAD - (len(PALETTE) * PITCH) - 62
-    parts.append('<text class="lbl" x="' + str(lx) + '" y="' + str(ly + CELL - 3) + '">Less</text>')
+    ly = PAD + TOP + 7 * PITCH + 20
+    lx = WIDTH - PAD - (len(PALETTE) * PITCH) - 66
+    p.append('<text class="lbl" x="' + str(lx) + '" y="' + str(ly + CELL - 3) + '">Less</text>')
     for i in range(len(PALETTE)):
-        parts.append(
-            '<rect class="box" x="' + str(lx + 32 + i * PITCH) + '" y="' + str(ly) +
-            '" width="' + str(CELL) + '" height="' + str(CELL) + '" rx="2.5" fill="' + PALETTE[i] +
-            '" style="animation-delay:' + format(2.2 + i * 0.05, ".2f") + 's"/>'
-        )
-    parts.append('<text class="lbl" x="' + str(lx + 36 + len(PALETTE) * PITCH) + '" y="' + str(ly + CELL - 3) + '">More</text>')
+        p.append('<rect class="box" x="' + str(lx + 34 + i * PITCH) + '" y="' + str(ly) +
+                 '" width="' + str(CELL) + '" height="' + str(CELL) + '" rx="2.5" fill="' +
+                 PALETTE[i] + '" style="animation-delay:' +
+                 format(last_delay - POP + i * 0.06, ".2f") + 's"/>')
+    p.append('<text class="lbl" x="' + str(lx + 38 + len(PALETTE) * PITCH) + '" y="' +
+             str(ly + CELL - 3) + '">More</text>')
 
-    parts.append('<text class="foot" x="' + str(PAD + GUTTER) + '" y="' + str(ly + CELL - 3) + '">' +
-                 format(total, ",") + ' contributions in the last year</text>')
+    p.append('<text class="foot" x="' + str(PAD + GUTTER) + '" y="' + str(ly + CELL - 2) + '">' +
+             format(total, ",") + ' contributions in the last year</text>')
 
-    parts.append("</svg>")
-    return "\n".join(parts)
+    p.append("</svg>")
+    return "\n".join(p)
 
 
 def main():
     if not os.path.exists(DATA):
         print(DATA + " not found - run fetch_contributions.py first")
         return 1
-
     f = open(DATA, encoding="utf-8")
     payload = json.load(f)
     f.close()
-
     if isinstance(payload, list):
         payload = {"days": payload}
-
     svg = render(payload)
-
     out = open(OUT, "w", encoding="utf-8", newline="\n")
     out.write(svg)
     out.close()
-
-    print("Wrote " + OUT + " (" + format(len(svg.encode("utf-8")), ",") + " bytes)")
+    print("Wrote " + OUT + " (" + format(len(svg.encode("utf-8")), ",") + " bytes), " +
+          str(WIDTH) + "x" + str(HEIGHT))
     return 0
 
 

@@ -15,4 +15,14 @@
   </tr>
 </table>
 
+<br>
+
+<h3><code>joey@github ~ $ ./links.sh</code></h3>
+
+<p><b>Founder · AI Builder · Student</b></p>
+
+<a href="https://rhythmay-girdhar.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-joeygirdhar.com-0d1117?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/rhythmay-girdhar/"><img src="https://img.shields.io/badge/LINKEDIN-joeygirdhar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<img src="https://komarev.com/ghpvc/?username=JoeyGirdhar&color=8957e5&style=for-the-badge&label=PROFILE+VIEWS" />
+
 </div>
