@@ -18,13 +18,13 @@
 <text class="lbl" x="16" y="65">Mon</text>
 <text class="lbl" x="16" y="95">Wed</text>
 <text class="lbl" x="16" y="125">Fri</text>
-<rect class="box" x="50" y="40" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:0.000s"><title>1 on 2025-08-03</title></rect>
-<rect class="box" x="50" y="55" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:0.036s"><title>1 on 2025-08-04</title></rect>
-<rect class="box" x="50" y="70" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:0.072s"><title>1 on 2025-08-05</title></rect>
+<rect class="box" x="50" y="40" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.000s"><title>0 on 2025-08-03</title></rect>
+<rect class="box" x="50" y="55" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.036s"><title>0 on 2025-08-04</title></rect>
+<rect class="box" x="50" y="70" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.072s"><title>0 on 2025-08-05</title></rect>
 <rect class="box" x="50" y="85" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.108s"><title>0 on 2025-08-06</title></rect>
-<rect class="box" x="50" y="100" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:0.144s"><title>2 on 2025-08-07</title></rect>
+<rect class="box" x="50" y="100" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.144s"><title>0 on 2025-08-07</title></rect>
 <rect class="box" x="50" y="115" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.180s"><title>0 on 2025-08-08</title></rect>
-<rect class="box" x="50" y="130" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:0.216s"><title>1 on 2025-08-09</title></rect>
+<rect class="box" x="50" y="130" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.216s"><title>0 on 2025-08-09</title></rect>
 <rect class="box" x="65" y="40" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:0.065s"><title>1 on 2025-08-10</title></rect>
 <rect class="box" x="65" y="55" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.101s"><title>0 on 2025-08-11</title></rect>
 <rect class="box" x="65" y="70" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:0.137s"><title>0 on 2025-08-12</title></rect>
@@ -388,7 +388,7 @@
 <rect class="box" x="830" y="85" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:3.488s"><title>3 on 2026-08-05</title></rect>
 <rect class="box" x="830" y="100" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:3.524s"><title>3 on 2026-08-06</title></rect>
 <rect class="box" x="830" y="115" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:3.560s"><title>2 on 2026-08-07</title></rect>
-<rect class="box" x="830" y="130" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:3.596s"><title>0 on 2026-08-08</title></rect>
+<rect class="box" x="830" y="130" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:3.596s"><title>1 on 2026-08-08</title></rect>
 <text class="lbl" x="689" y="174">Less</text>
 <rect class="box" x="723" y="165" width="12" height="12" rx="2.5" fill="#161b22" style="animation-delay:3.60s"/>
 <rect class="box" x="738" y="165" width="12" height="12" rx="2.5" fill="#0e4429" style="animation-delay:3.66s"/>
@@ -397,5 +397,5 @@
 <rect class="box" x="783" y="165" width="12" height="12" rx="2.5" fill="#39d353" style="animation-delay:3.84s"/>
 <rect class="box" x="798" y="165" width="12" height="12" rx="2.5" fill="#69f0a0" style="animation-delay:3.90s"/>
 <text class="lbl" x="817" y="174">More</text>
-<text class="foot" x="50" y="175">481 contributions in the last year</text>
+<text class="foot" x="50" y="175">476 contributions in the last year</text>
 </svg>
