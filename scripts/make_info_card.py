@@ -25,7 +25,7 @@ STACK = [
 HIGHLIGHTS = [
     "Prime: 607K-param GPT, 66% valid molecules (73x chance)",
     "MicroGradient: 97.8% on MNIST in pure NumPy",
-    "Go check out my portfolio -> rhythmay.me",
+    "Go check out my portfolio, link down below",
 ]
 
 KEY_X = 20

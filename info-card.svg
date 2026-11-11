@@ -24,5 +24,5 @@
 <text x="20" y="368" class="text blue" style="animation-delay: 1.22s;">- Highlights</text>
 <text x="20" y="388" class="text" style="animation-delay: 1.30s;"><tspan class="dot">*</tspan> <tspan class="val">Prime: 607K-param GPT, 66% valid molecules (73x chance)</tspan></text>
 <text x="20" y="408" class="text" style="animation-delay: 1.38s;"><tspan class="dot">*</tspan> <tspan class="val">MicroGradient: 97.8% on MNIST in pure NumPy</tspan></text>
-<text x="20" y="428" class="text" style="animation-delay: 1.46s;"><tspan class="dot">*</tspan> <tspan class="val">Go check out my portfolio -&gt; rhythmay.me</tspan></text>
+<text x="20" y="428" class="text" style="animation-delay: 1.46s;"><tspan class="dot">*</tspan> <tspan class="val">Go check out my portfolio, link down below</tspan></text>
 </svg>
