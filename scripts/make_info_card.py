@@ -2,29 +2,30 @@ import os
 
 OUT = "info-card.svg"
 WIDTH = 490
-HEIGHT = 430
+HEIGHT = 450
 
 USER = "joey@github"
 
 ROWS = [
-    ("Now", "Founder & CEO @ RightClick | $30k+ Invoiced"),
-    ("Prev", "Top 100 Stock Pitcher @ Global YIS | 289.6% ROI"),
-    ("Also", "FBLA President | Top 20 Nationally"),
-    ("Plus", "4x Hackathon Competitor | 2x Hackathon Winner"),
-    ("Built", "15+ DeepL Pipelines | 100+ AI/ML Agentic Systems"),
-    ("Edu", "Rouse High School '28 (CS / AI / ML)"),
+    ("Now", "Founder @ Ambient Intelligence Startup"),
+    ("Prev", "Agentic AI @ CriYx | 85+ Agents, 200 Workflows"),
+    ("Also", "USAMTS | CodeCup 2024-26 | NASA Space Apps"),
+    ("Plus", "Claude Hackathon | TACC | Congressional App"),
+    ("Built", "Veritas | Prime | MicroGradient | Cofactor"),
+    ("Edu", "Rouse High School '28 (CS / Math / ML)"),
 ]
 
 STACK = [
-    ("Frontend", "React, JavaScript, TypeScript, Figma"),
-    ("Backend", "Node.js, Python, Swift, Firebase, SQL"),
-    ("AI / ML", "LangChain, OpenAI, Agentic Workflows"),
-    ("Cloud", "AWS, Google Cloud, Supabase, Vercel"),
+    ("ML", "PyTorch, NumPy, Transformers, Autodiff"),
+    ("Agents", "LangChain, Goose, Tool Use, Evals"),
+    ("Systems", "Python, C++, TypeScript, Swift"),
+    ("Math", "Number Theory, Linear Algebra, Proofs"),
 ]
 
 HIGHLIGHTS = [
-    "Hourly App Creator | Top 100 Diamond Challenge Winner",
-    "2nd Place Internationally - YIS Quiz Bowl",
+    "Prime: 607K-param GPT, 66% valid molecules (73x chance)",
+    "MicroGradient: 97.8% on MNIST in pure NumPy",
+    "Go check out my portfolio -> rhythmay.me",
 ]
 
 KEY_X = 20
